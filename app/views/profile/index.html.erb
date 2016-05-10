@@ -1,0 +1,20 @@
+<h1>Update Profile</h1>
+
+<div class="row">
+
+
+  <%= form_for @user, url: 'profile', method: 'post' do |f| %>
+  <div class="row">
+    <div class="input-field col s6">
+      <%= f.text_field :first_name, class: 'validate' %>
+
+      <label for="first_name" class="active">First Name</label>
+    </div>
+    <div class="input-field col s6">
+      <%= f.text_field :last_name, class: 'validate' %>
+      <label for="last_name" class="active">Last Name</label>
+    </div>
+    <%= f.submit "Update", class:'waves-effect waves-light btn' %>
+  </div>
+  <% end %>
+</div>
